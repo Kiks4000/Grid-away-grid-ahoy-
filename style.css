@@ -1,15 +1,35 @@
+/*------ CSS Général ------*/
+
 body{
     background-color: #e6eff6;
     font-family: 'Roboto', sans-serif;
     color: #7e8a97;
 }
 
+p{
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 30px;
+}
+
+img{
+    width: 100px;
+    padding: 10px;
+}
+
+h1{
+    padding: 15px;
+    text-align: center;
+}
+
+/* ------ Cards ------ */
+
 .container {  
     display: grid;
     grid-template-columns: 1fr repeat(3, 1fr);
     gap: 30px 30px;
-    grid-auto-flow: dense;
-    margin: 40px;
+    margin: 40px auto;
+    width: 1300px;
   }
 
 .card{
@@ -29,21 +49,7 @@ body{
     box-shadow: 0px 20px 20px 0px rgba(0,0,0,0.3);
 }
 
-p{
-    text-align: center;
-    padding: 20px;
-    padding-bottom: 30px;
-}
-
-img{
-    width: 100px;
-    padding: 10px;
-}
-
-h1{
-    padding: 15px;
-    text-align: center;
-}
+/* ------ Bouton "Learn More" ------ */
 
 .bouton {
 	background-color: #fff;
@@ -68,7 +74,7 @@ h1{
     content: "";
     position: absolute;
     width: 60px;
-    border: 1px solid #f0f4f5;
+    border: 1px solid #e7eef0;
     background-color: #f0f4f5;
     top: -10px;
     left: 50%;
@@ -81,6 +87,62 @@ h1{
     opacity: 0;
 }
 
+/* ------ Resize img 3 ------ */
+
 .resize{
     width: 65px;
+}
+
+/* ------ Navigation Bar ------ */
+
+header{
+    margin: 5px auto;
+    width: 1300px;
+    border: 1px transparent;
+    border-radius: 8px;
+    background-color: #fff;
+    padding:16px 31px;
+    transition: all 0.3s;
+    box-shadow: 0px 20px 20px 0px rgba(0,0,0,0.1);
+}
+
+header:hover{
+    box-shadow: 0px 20px 20px 0px rgba(0,0,0,0.3);
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.menuLink:link, .menuLink:visited{
+    text-decoration: none;
+    font-size: medium;
+    color: #7e8a97;
+}
+
+.menuLink{
+    color : #7e8a97 ;
+    display : inline-block;
+    position : relative;
+}
+
+.menuLink::after{
+    position : absolute;
+    width : 100%;
+    height : 2px;
+    background-color: #7e8a97;
+    bottom: -2px;
+    left: 0;
+    transform : scaleX(0);
+    transform-origin: bottom right;
+    transition : transform 0.25s linear;
+    content : "";
+}
+
+.menuLink:hover::after{
+    transform-origin: bottom left;
+    transform: scaleX(1);
 }
