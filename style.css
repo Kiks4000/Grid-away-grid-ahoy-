@@ -81,6 +81,7 @@ h1{
     transform: translate(-50%, -50%);
     pointer-events: none;
     align-items: center;
+    transition: ease-in 0.3s;
 }
 
 .bouton:hover::before{
